@@ -1,0 +1,27 @@
+{
+  "name": "unit2-project",
+  "version": "1.0.0",
+  "description": "**Purpose** Influencer Photo Spots was created to provide a rising social media stars with the hottest locations to create content for their media pages. Sometimes it is hard to create consistent content and keep up with a certain theme. This app will make that part easier by having user generated content providing locations that are great for influencer photography.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shalaind/Unit2-FullStackApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shalaind/Unit2-FullStackApp/issues"
+  },
+  "homepage": "https://github.com/shalaind/Unit2-FullStackApp#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.2"
+  }
+}
