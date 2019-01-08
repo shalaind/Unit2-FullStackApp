@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const Location = new Schema(
     {
-        name: String,
+        username: String,
         title: String,
         caption: String,
         address: String,
