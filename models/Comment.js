@@ -1,11 +1,11 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
-const User = new Schema(
+const Comment = new Schema(
     {
         name: String,
-        email: String
+        comment: String
     }
 )
 
-module.exports = mongoose.model("User", User)
+module.exports = mongoose.model("Comment", Comment)
