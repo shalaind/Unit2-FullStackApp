@@ -13,7 +13,6 @@ const locationController = {
     },
 
     new: (req, res) => {
-        console.log("new is working")
         res.render("locations/new-location")
     },
 
@@ -25,16 +24,23 @@ const locationController = {
             address: "3344 Broadway St., New York City, NY",
             image: "https://manepedia.files.wordpress.com/2012/04/museo-de-la-moda.jpg"
         }).then(newLocation => {
-            res.redirect('/')
+            res.redirect('/all-locations')
         })
-    }
+    },
 
-    // {
-    // edit: (res, req) => {
-    // const locationId = req.params.id
-    //     // console.log(newslinkId)
-    // res.render'app/edit', {locationId})
-    // }
+    edit: (res, req) => {
+        const locationId = req.params.id
+        res.render('/:id/edit-location', {locationId})
+    },
+
+    update: (res, req) => {
+        const locationId = req.params.id
+        // console.log(req.body)
+        Locations.findByIdAndUpdate(locationId, req.body, {new: true}).then((location) => {
+            res.redirect('/all-locations')
+        })
+
+    }
 }
 
 module.exports = locationController
