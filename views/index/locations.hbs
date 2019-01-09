@@ -1,12 +1,10 @@
 {{#each allLocations}}
 
-<h1>This is the navbar with logo, sign up link and add location</h1>
-<h1> This is FeedPix</h1>
-
 <h1>{{title}}</h1>
 <h2>{{username}}</h2>
-<a href="/{{Location._id}}/edit-location">edit location</a></li><br>
-{{image}}
+
+<a href="/{{_id}}/edit-location">edit location</a></li><br>
+<img src={{image}} alt="" >
 <h2>{{address}}</h2>
 <p>{{caption}}</p>
 

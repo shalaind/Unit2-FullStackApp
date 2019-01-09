@@ -28,12 +28,12 @@ const locationController = {
         })
     },
 
-    edit: (res, req) => {
+    edit: (req, res) => {
         const locationId = req.params.id
-        res.render('/:id/edit-location', {locationId})
+        res.render('locations/edit-location', {locationId})
     },
 
-    update: (res, req) => {
+    update: (req, res) => {
         const locationId = req.params.id
         // console.log(req.body)
         Locations.findByIdAndUpdate(locationId, req.body, {new: true}).then((location) => {
