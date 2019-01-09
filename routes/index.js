@@ -14,7 +14,9 @@ router.get('/', locationController.index)
 //show 
 router.get('/all-locations', locationController.show)
 //create
-router.get('/create-location', locationController.create)
+// router.get('/create-location', locationController.create)
+//post new model in the database
+router.post('/create-location', locationController.create)
 //new
 router.get('/new-location', locationController.new)
 //edit

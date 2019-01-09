@@ -18,11 +18,11 @@ const locationController = {
 
     create: (req, res) => {
         Locations.create({
-            username: "ShalainD",
-            title: "MODA",
-            caption: "There's no parking. Take the train",
-            address: "3344 Broadway St., New York City, NY",
-            image: "https://manepedia.files.wordpress.com/2012/04/museo-de-la-moda.jpg"
+            username: req.body.username,
+            title: req.body.title,
+            caption: req.body.caption,
+            address: req.body.address,
+            image: req.body.image
         }).then(newLocation => {
             res.redirect('/all-locations')
         })
