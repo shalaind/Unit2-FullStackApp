@@ -12,7 +12,10 @@ const locationController = require('../controllers/Location')
 //read
 router.get('/', locationController.index)
 //create
-router.get('/add-location', locationController.create)
+router.get('/create-location', locationController.create)
+//new
+router.get('/new-location', locationController.new)
+
 //update
 // router.get('/:id/edit-location', locationController.edit)
 //update

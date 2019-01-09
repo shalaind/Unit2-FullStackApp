@@ -3,9 +3,18 @@ Locations = require("../models/Location")
 const locationController = {
 
     index: (req, res) => {
-        Locations.find({}).then(locations => {
-            res.send(locations)
+        res.render("index/splash")
+    },
+
+    show: (req, res) => {
+        Locations.find({}).then((allLocations) => {
+            res.render("index/locations", {allLocations})
         })
+    },
+
+    new: (req, res) => {
+        console.log("new is working")
+        res.render("locations/new-location")
     },
 
     create: (req, res) => {
@@ -18,7 +27,8 @@ const locationController = {
         }).then(newLocation => {
             res.redirect('/')
         })
-    },
+    }
+
     // {
     // edit: (res, req) => {
     // const locationId = req.params.id
