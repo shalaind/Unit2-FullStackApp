@@ -14,8 +14,6 @@ router.get('/', locationController.index)
 //show 
 router.get('/all-locations', locationController.show)
 //create
-// router.get('/create-location', locationController.create)
-//post new model in the database
 router.post('/create-location', locationController.create)
 //new
 router.get('/new-location', locationController.new)
@@ -24,7 +22,7 @@ router.get('/:id/edit-location', locationController.edit)
 //update button
 router.patch('/:id', locationController.update)
 //delete
-// router.delete('/:id/edit-location', locationController.delete)
+router.delete('/:id', locationController.delete)
 
 //add delete and read for comments 
 // router.get('/add-comment', locationController.create)

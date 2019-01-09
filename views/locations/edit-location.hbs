@@ -1,9 +1,15 @@
 <h1>this is the page to edit the location</h1>
-<ul>
-    <li>name</li>
-    <li>address</li>
-    <li>caption</li>
-    <li>image</li>
-</ul>
-<h2>update</h2>
-<h2>delete</h2>
+
+
+<form action="/{{locationId}}?_method=PATCH" method="POST">
+    <input type="text" name="username" placeholder="Username" value="">
+    <input type="text" name="title" placeholder="Title" value="">
+    <input type="text" name="address" placeholder="Address" value="">
+    <input type="text" name="caption" placeholder="Caption" value="">
+    <input type="text" name="image" placeholder="Image Link" value="">
+    <button type="submit">Update</button>
+</form>
+
+   <form action="/{{locationId}}?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>

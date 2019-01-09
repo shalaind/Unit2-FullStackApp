@@ -39,7 +39,13 @@ const locationController = {
         Locations.findByIdAndUpdate(locationId, req.body, {new: true}).then((location) => {
             res.redirect('/all-locations')
         })
+    },
 
+    delete: (req, res) => {
+        const locationId = req.params.id
+        Locations.findByIdAndRemove(locationId).then(() => {
+            res.redirect('/all-locations')
+        })
     }
 }
 
