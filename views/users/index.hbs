@@ -1,13 +1,14 @@
-{{#each users}}
 <h1>this will show all the users</h1>
-<h2>{{username}}</h2>
-<h2>{{email}}</h2>
 
+{{#each users}}
 <img src={{image}} alt="" >
+ 
+ {{_id}}
 
-{{_id}}
-
-<form action="/{{_id}}?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
+<form action="/user-profile/{{_id}}">
+        <button type="submit">view profile</button>
 </form>
+
+
+
 {{/each}}

@@ -1,20 +1,24 @@
 Comments = require("../models/Comment")
-Comments = require("../models/Location")
+Locations = require("../models/Location")
 
 
 const commentController = {
     new: (req, res) => {
         const commentLocId = req.params.id
-        
-        
-        res.render("comments/create", {commentLocId})
+        res.render("comments/create", {commentLocId:commentLocId})
     },
     create: (req, res) => {
-        Comments.create({
-            username: req.body.username,
-            comment: req.body.comment,
-        }).then(newComment => {
-            res.redirect('/all-locations')
+        const commentLocId = req.params.id
+        Locations.findById(commentLocId).then(
+         (LocationArray) => {
+         Comments.create({
+             username: req.body.username,
+             comment: req.body.comment,
+            }).then((newComment) => {
+                LocationArray.comments.push(newComment)
+                LocationArray.save()
+                res.redirect('/all-locations')
+            })
         })
     }
 }

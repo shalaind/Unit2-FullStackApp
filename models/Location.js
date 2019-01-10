@@ -9,7 +9,7 @@ const Location = new Schema(
         address: String,
         image: String,
         comments: [{
-            type: Schema.Types.String,
+            type: Schema.Types.ObjectId,
             ref: 'Comment'
         }
         ] 

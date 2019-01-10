@@ -20,6 +20,7 @@
   "homepage": "https://github.com/shalaind/Unit2-FullStackApp#readme",
   "dependencies": {
     "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "hbs": "^4.0.1",
     "method-override": "^3.0.0",

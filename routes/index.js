@@ -24,14 +24,15 @@ router.patch('/:id', locationController.update)
 //delete
 router.delete('/:id', locationController.delete)
 //show comments on location page
-router.post('/:id/create-comment', commentController.create)
+router.post('/:id/add-comment', commentController.create)
 //add delete and read for comments 
 router.get('/:id/add-comment', commentController.new)
 // router.delete('/:id', locationController.delete)
 
 //add and delete for users
 router.get('/users', userController.index)
-router.delete('/:id', userController.delete)
+router.get('/user-profile/:id', userController.show)
+router.delete('/user-profile/:id/', userController.delete)
 router.post('/create-user', userController.create)
 router.get('/new-user', userController.new)
 

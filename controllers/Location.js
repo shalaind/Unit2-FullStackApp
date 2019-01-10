@@ -24,7 +24,8 @@ const locationController = {
             title: req.body.title,
             caption: req.body.caption,
             address: req.body.address,
-            image: req.body.image
+            image: req.body.image,
+            comments: []
         }).then(newLocation => {
             res.redirect('/all-locations')
         })

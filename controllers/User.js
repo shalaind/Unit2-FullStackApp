@@ -31,6 +31,15 @@ const userController = {
         })
     },
 
+    show: (req, res) => {
+    
+        const userId = req.params.id
+        Users.findById(userId).then((userId) => {
+
+        res.render("users/userProfile", {userId})
+        })
+    }
+
 }
 
 module.exports = userController

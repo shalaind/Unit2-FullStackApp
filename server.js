@@ -8,8 +8,10 @@ const methodOverride = require('method-override')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 app.use(methodOverride('_method'))
 app.use('/', router)
+app.use(express.static(__dirname + '/public'));
 
 app.set("view engine", "hbs")
 // process.env.PORT is necessary for deployment to Heroku
