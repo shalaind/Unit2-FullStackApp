@@ -4,16 +4,19 @@ const Comment = require('../models/Comment')
 
 let newUsers = [
     {
-        name: "Shalain",
-        email: "sderamus21@gmail.com"
+        username: "Shalain",
+        email: "sderamus21@gmail.com",
+        image: "https://static1.squarespace.com/static/549dd0cee4b029881efa814b/5b101ad2758d46ee70365c19/5b101b0588251bbe83b3ee2b/1543878073891/dc-headshot-photographer-68.JPG"
     }, 
     {
-        name: "Destin",
-        email: "destinf@gmail.com"
+        username: "Destin",
+        email: "destinf@gmail.com",
+        image: "https://static1.squarespace.com/static/549dd0cee4b029881efa814b/5b101ad2758d46ee70365c19/5b101b0588251bbe83b3ee2b/1543878073891/dc-headshot-photographer-68.JPG"
     },
     {
-        name: "Karelys",
-        email: "karelyss@gmail.com"
+        username: "Karelys",
+        email: "karelyss@gmail.com",
+        image: "https://static1.squarespace.com/static/549dd0cee4b029881efa814b/5b101ad2758d46ee70365c19/5b101b0588251bbe83b3ee2b/1543878073891/dc-headshot-photographer-68.JPG"
     }
 ]
 

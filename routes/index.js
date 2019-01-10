@@ -30,13 +30,15 @@ router.get('/:id/add-comment', commentController.new)
 // router.delete('/:id', locationController.delete)
 
 //add and delete for users
+router.get('/users', userController.index)
+router.delete('/:id', userController.delete)
+router.post('/create-user', userController.create)
+router.get('/new-user', userController.new)
 
-// router.get('/add', locationController.create)
-// router.delete('/:id/', locationController.delete)
+
 
 
 // router.get('/', linkController.index)
-// router.post('/', linkController.create)
 // router.get('/new', linkController.new)
 // router.get('/:id', linkController.show)
 // router.get('/:id/edit', linkController.edit)
