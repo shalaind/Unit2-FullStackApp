@@ -23,9 +23,10 @@ router.get('/:id/edit-location', locationController.edit)
 router.patch('/:id', locationController.update)
 //delete
 router.delete('/:id', locationController.delete)
-
+//show comments on location page
+router.post('/:id/create-comment', commentController.create)
 //add delete and read for comments 
-// router.get('/add-comment', locationController.create)
+router.get('/:id/add-comment', commentController.new)
 // router.delete('/:id', locationController.delete)
 
 //add and delete for users

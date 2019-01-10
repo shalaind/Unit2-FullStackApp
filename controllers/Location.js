@@ -1,4 +1,6 @@
 Locations = require("../models/Location")
+Comments = require("../models/Comment")
+
 
 const locationController = {
 
@@ -7,7 +9,7 @@ const locationController = {
     },
 
     show: (req, res) => {
-        Locations.find({}).then((allLocations) => {
+        Locations.find({}).populate('comments').then((allLocations) => { 
             res.render("index/locations", {allLocations})
         })
     },

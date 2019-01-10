@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const Comment = new Schema(
     {
-        name: String,
+        username: String,
         comment: String
     }
 )

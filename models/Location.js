@@ -7,8 +7,14 @@ const Location = new Schema(
         title: String,
         caption: String,
         address: String,
-        image: String
+        image: String,
+        comments: [{
+            type: Schema.Types.String,
+            ref: 'Comment'
+        }
+        ] 
     }
 )
+
 
 module.exports = mongoose.model("Location", Location)

@@ -8,5 +8,14 @@
 <h2>{{address}}</h2>
 <p>{{caption}}</p>
 
+<div>
+{{#each comments}}
+<p><strong>{{username}}</strong> {{comment}}</p>
+{{/each}}
+
+
+<a href="/{{_id}}/add-comment">add comment</a>
+</div>
 
 {{/each}}
+
