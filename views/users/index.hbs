@@ -1,14 +1,9 @@
-<h1>this will show all the users</h1>
-
+<div class="userContainer">
 {{#each users}}
-<img src={{image}} alt="" >
+
+
+<a href="/user-profile/{{_id}}"> <img class="userImage" src={{image}} alt="" ></a>
  
- {{_id}}
-
-<form action="/user-profile/{{_id}}">
-        <button type="submit">view profile</button>
-</form>
-
-
 
 {{/each}}
+</div>   

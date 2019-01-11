@@ -1,14 +1,18 @@
 {{#each allLocations}}
 
-<h1>{{title}}</h1>
-<h2>{{username}}</h2>
+<div class= "container">
+<div class="locationHeader">
+<div class="columnLH">
+<h1><strong>{{title}}</strong></h1>
+<h2 class="edit">{{address}}</h2>
 
-{{_id}}
+</div>
+<a class="edit" href="/{{_id}}/edit-location">edit</a>
+</div>
 
-<a href="/{{_id}}/edit-location">edit location</a></li><br>
+
 <img src={{image}} alt="" >
-<h2>{{address}}</h2>
-<p>{{caption}}</p>
+<p><strong>{{username}}</strong> {{caption}}</p>
 <div>
 {{#each comments}}
 <p><strong>{{username}}</strong> {{comment}} <a href="/{{_id}}/edit-comment">edit</a></li></p>
@@ -19,4 +23,5 @@
 </div>
 
 {{/each}}
+</div>
 

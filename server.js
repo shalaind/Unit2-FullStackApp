@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const router = require('./routes/index')
+var path = require('path');
 const methodOverride = require('method-override')
 
 
@@ -11,7 +12,13 @@ app.use(express.json());
 
 app.use(methodOverride('_method'))
 app.use('/', router)
-app.use(express.static(__dirname + '/public'));
+
+// var publicDir = require('path').join(__dirname,'/public');
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public/images')); 
+
+// app.use(express.static(__dirname + '/public'));
 
 app.set("view engine", "hbs")
 // process.env.PORT is necessary for deployment to Heroku

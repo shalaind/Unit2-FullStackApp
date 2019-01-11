@@ -6,15 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PicSpot</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+
 </head>
 <body>
-<nav>
-    <a href="/all-locations">PicSpot</a>
-    <a href="/users">view users</a>
-     <a href="/new-user">Create User</a>
-     <a href="/new-location">Create Location</a>
 
+<nav class="navbar is-danger" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/all-locations">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="/all-locations" class="navbar-item">
+        Home
+      </a>
+
+      <a href="/users" class="navbar-item">
+        Profiles
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a href="/new-user" class="button is-light"> Sign Up</a>
+          <a href="/new-location" class="button is-primary"><strong>Add Spot</strong></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
+
+
     {{{body}}}
 </body>
 </html>

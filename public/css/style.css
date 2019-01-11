@@ -1,4 +1,42 @@
-body {
+/* body {
     background-color: black; 
     color: white; 
+} */
+
+
+.locationHeader {
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+    font-size: 2rem; 
+}
+
+.edit {
+    font-size: 1rem; 
+    margin-top: 2%;
+    margin-bottom: 5%; 
+
+}
+
+.userImage {
+    border-radius: 50%; 
+    width: 200px;
+    height: 200px;
+}
+
+.userImage:hover {
+    opacity: .8;
+}
+
+.userContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%; 
+}
+
+.formContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    text-align: center;
 }
