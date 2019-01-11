@@ -27,7 +27,10 @@ router.delete('/:id', locationController.delete)
 router.post('/:id/add-comment', commentController.create)
 //add delete and read for comments 
 router.get('/:id/add-comment', commentController.new)
-// router.delete('/:id', locationController.delete)
+//edit comment page
+router.get('/:id/edit-comment', commentController.edit)
+//delete comment
+router.delete('/:id/edit-comment', commentController.delete)
 
 //add and delete for users
 router.get('/users', userController.index)

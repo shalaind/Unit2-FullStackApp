@@ -20,6 +20,17 @@ const commentController = {
                 res.redirect('/all-locations')
             })
         })
+    },
+    edit: (req, res) => {
+        const locationId = req.params.id
+        res.render('comments/delete', {locationId})
+    },
+    delete: (req, res) => {
+        const locationId = req.params.id
+        Locations.comments.findByIdAndRemove(locationId).then(() => {
+            console.log("comment is deleted")
+            res.redirect('/all-locations')
+        })
     }
 }
 
