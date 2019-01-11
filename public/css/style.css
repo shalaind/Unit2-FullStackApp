@@ -39,6 +39,11 @@
     justify-content: space-around;
 }
 
+.outsideContainer {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
 
 .splashContainer {
     display: flex;
