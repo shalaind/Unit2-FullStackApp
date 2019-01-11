@@ -5,7 +5,7 @@ Comments = require("../models/Comment")
 const locationController = {
 
     index: (req, res) => {
-        res.render("index/splash")
+        res.render("splash")
     },
 
     show: (req, res) => {

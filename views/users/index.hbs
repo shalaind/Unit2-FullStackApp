@@ -1,11 +1,37 @@
 <h1 class="pageHeader">Users</h1>
 
-<div class="userContainer">
+
+<div class="formContainer">
 {{#each users}}
+        <div class="card">
+                <div class="card-image">
+                        <figure class="image is-4by3">
+<a href="/user-profile/{{_id}}"> <img src={{image}} alt="" ></a>
 
+                        </figure>
+                </div>
+                <div class="card-content">
+                        <div class="media">
+                                <div class="media-left">
+                                        <figure class="image is-48x48">
+                                            <a href="/user-profile/{{_id}}"> <img src={{image}} alt="" ></a>
+                                        </figure>
+                                </div>
+                                <div class="media-content">
+                                        <p class="title is-4">@{{username}}</p>
+                                </div>
+                        </div>
 
-<a href="/user-profile/{{_id}}"> <img class="userImage" src={{image}} alt="" ></a>
- 
+                        <div class="content">
+                                {{email}}
+                                <br>
+                                <br>
 
+                                <form action="/user-profile/{{_id}}?_method=DELETE" method="POST">
+                                        <button class="button is-link is-info" type="submit">Delete</button>
+                                </form>
+                        </div>
+                </div>
+        </div>
 {{/each}}
-</div>   
+</div>

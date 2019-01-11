@@ -40,7 +40,25 @@
     margin-top: 2%;
     text-align: center;
     justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
+
+
+.splashContainer {
+    display: flex;
+    /* margin-top: 2%; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* align-content: center; */
+    flex-direction: column;
+    border: solid;
+    max-width: 40%;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+}
+
 
 .inputBox {
     width: 300px;
@@ -51,7 +69,4 @@
 .pageHeader {
     text-align: center;
     font-size: 50px;
-}
-.editStyle {
-    color:red;
 }

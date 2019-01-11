@@ -1,14 +1,35 @@
-
 <h1 class="pageHeader">User Profile </h1>
 
+
 <div class="formContainer">
+        <div class="card">
+                <div class="card-image">
+                        <figure class="image is-4by3">
+                                <img src={{userId.image}} alt="">
 
-<img class="userImage" src={{userId.image}} alt="" >
-<h2>{{userId.username}}</h2>
-<h2>{{userId.email}}</h2>
+                        </figure>
+                </div>
+                <div class="card-content">
+                        <div class="media">
+                                <div class="media-left">
+                                        <figure class="image is-48x48">
+                                                <img src={{userId.image}} alt="">
+                                        </figure>
+                                </div>
+                                <div class="media-content">
+                                        <p class="title is-4">@{{userId.username}}</p>
+                                </div>
+                        </div>
 
+                        <div class="content">
+                                {{userId.email}}
+                                <br>
+                                <br>
 
-<form action="/user-profile/{{userId._id}}?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
-</form>
+                                <form action="/user-profile/{{userId._id}}?_method=DELETE" method="POST">
+                                        <button class="button is-link is-info" type="submit">Delete</button>
+                                </form>
+                        </div>
+                </div>
+        </div>
 </div>
