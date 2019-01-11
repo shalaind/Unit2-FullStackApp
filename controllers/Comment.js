@@ -21,11 +21,15 @@ const commentController = {
             })
         })
     },
-    edit: (req, res) => {
-        const locationId = req.params.id
-        res.render('comments/delete', {locationId})
+    edit: (req, res) => { 
+        const commentId = req.params.id
+        console.log(commentId)
+        Comments.findById(commentId).then(comment => {
+            res.render('comments/delete', { comment })
+        })
+
     },
-    delete: (req, res) => {
+    delete: (req, res) => {console.log("sssss",req.params)
         const commentId = req.params.id
         Comments.findByIdAndRemove(commentId).then(() => {
             console.log("comment is deleted")

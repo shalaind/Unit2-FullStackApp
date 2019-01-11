@@ -1,20 +1,53 @@
-<h1>this is the create location page</h1>
-{{!-- <ul>
-    <li>name</li>
-    <li>address</li>
-    <li>caption</li>
-    <li>image</li>
-</ul> --}}
+<h1 class="pageHeader">Add a Spot</h1>
 
-
+<div class="formContainer">
 <form action="/create-location" method="POST">
-    <input type="text" name="username" placeholder="Username" value="">
-    <input type="text" name="title" placeholder="Title" value="">
-    <input type="text" name="address" placeholder="Address" value="">
-    <input type="text" name="caption" placeholder="Caption" value="">
-    <input type="text" name="image" placeholder="Image Link" value="">
-    <button type="submit">Submit</button>
+
+<div class="field">
+  <label class="label">Username</label>
+  <div class="control">
+    <input class="inputBox" type="text" name="username"  value="">
+    </div>
+</div>
+
+<div class="field">
+  <label class="label">Title</label>
+  <div class="control">
+    <input class="inputBox" type="text" name="title"  value="">
+    </div>
+</div>
+
+<div class="field">
+  <label class="label">Address</label>
+  <div class="control">
+    <input class="inputBox" type="text" name="address"  value="">
+    </div>
+</div>
+
+
+<div class="field">
+  <label class="label">Caption</label>
+  <div class="control">
+    <input class="inputBox" type="text" name="caption"  value="">
+    </div>
+</div>
+
+<div class="field">
+  <label class="label">Image</label>
+  <div class="control">
+    <input class="inputBox" type="text" name="image"  value="">
+    </div>
+</div>
+
+
+
+    <button class="button is-link is-info" type="submit">Submit</button>
 </form>
+
+</div>
+
+
+
 
 
 

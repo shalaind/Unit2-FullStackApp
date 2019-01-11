@@ -1,50 +1,51 @@
-<h1>this is the page to edit the location</h1>
+<h1 class="pageHeader">Edit Spot</h1>
+
 
 <div class="formContainer">
 
-<form action="/{{locationId}}?_method=PATCH" method="POST">
+  <form action="/{{locationId}}?_method=PATCH" method="POST">
 
-<div class="field">
-  <label class="label">Username</label>
-  <div class="control">
-<input type="text" name="username" placeholder="Username" value=""> 
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control">
+        <input class="inputBox" type="text" name="username"  value="">
+      </div>
     </div>
-</div>
 
-<div class="field">
-  <label class="label">Title</label>
-  <div class="control">
-    <input type="text" name="title" placeholder="Title" value="">
+    <div class="field">
+      <label class="label">Title</label>
+      <div class="control">
+        <input class="inputBox" type="text" name="title"  value="">
+      </div>
     </div>
-</div>
 
-<div class="field">
-  <label class="label">Address</label>
-  <div class="control">
-    <input type="text" name="address" placeholder="Address" value="">
+    <div class="field">
+      <label class="label">Address</label>
+      <div class="control">
+        <input class="inputBox" type="text" name="address"  value="">
+      </div>
     </div>
-</div>
 
 
-<div class="field">
-  <label class="label">Caption</label>
-  <div class="control">
-    <input type="text" name="caption" placeholder="Caption" value="">
+    <div class="field">
+      <label class="label">Caption</label>
+      <div class="control">
+        <input class="inputBox" type="text" name="caption"  value="">
+      </div>
     </div>
-</div>
 
-<div class="field">
-  <label class="label">Image</label>
-  <div class="control">
-    <input type="text" name="image" placeholder="Image Link" value="">
+    <div class="field">
+      <label class="label">Image</label>
+      <div class="control">
+        <input class="inputBox" type="text" name="image"  value="">
+      </div>
     </div>
-</div>
 
-    <button class="button is-link" type="submit">Update</button>
-</form>
+    <button class="button is-link is-info" type="submit">Update</button>
 
-   <form action="/{{locationId}}?_method=DELETE" method="POST">
-        <button class="button is-text" type="submit">Delete</button>
-    </form>
+  <form action="/{{locationId}}?_method=DELETE" method="POST">
+    <button class="button is-text" type="submit">Delete</button>
+  </form>
 
+  </form>
 </div>

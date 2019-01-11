@@ -30,7 +30,7 @@ router.get('/:id/add-comment', commentController.new)
 //edit comment page
 router.get('/:id/edit-comment', commentController.edit)
 //delete comment
-router.delete('/:id/edit-comment', commentController.delete)
+router.delete('/comment/:id', commentController.delete)
 
 //add and delete for users
 router.get('/users', userController.index)

@@ -1,9 +1,7 @@
-<h1>this is one user profile </h1>
 
+<h1 class="pageHeader">User Profile </h1>
 
-<h2> This is the profile image</h2>
-
-<h3>This is the info</h3>
+<div class="formContainer">
 
 <img class="userImage" src={{userId.image}} alt="" >
 <h2>{{userId.username}}</h2>
@@ -13,3 +11,4 @@
 <form action="/user-profile/{{userId._id}}?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
 </form>
+</div>

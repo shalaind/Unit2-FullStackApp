@@ -1,6 +1,16 @@
-<h1>this will delete the comments</h1>
+<h1 class="pageHeader">Delete Comment</h1>
+<div class="formContainer">
+
+{{comment.username}}
+{{comment.comment}}
 
 
-  <form action="/{{locationId}}?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
-    </form>
+</div>
+
+<div class="formContainer">
+
+<form action="/comment/{{comment._id}}?_method=DELETE" method="POST">
+    <button class="button is-link is-info" type="submit">Delete</button>
+</form>
+
+</div>

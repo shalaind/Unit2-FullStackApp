@@ -16,7 +16,7 @@ app.use('/', router)
 // var publicDir = require('path').join(__dirname,'/public');
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('public/images')); 
+app.use(express.static('public/images/')); 
 
 // app.use(express.static(__dirname + '/public'));
 
