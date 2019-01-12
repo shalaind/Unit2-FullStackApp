@@ -37,6 +37,18 @@
     justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
+
+}
+
+.updateContainer {
+    display: flex;
+    margin-top: 2%;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+
 }
 
 .outsideContainer {
@@ -47,7 +59,7 @@
 
 .splashContainer {
     display: flex;
-    /* margin-top: 2%; */
+    margin-top: 6%;
     text-align: center;
     align-items: center;
     justify-content: center;

@@ -1,7 +1,7 @@
 <h1 class="pageHeader">Edit Spot</h1>
 
-
-<div class="formContainer">
+<div class="outsideContainer">
+<div class="updateContainer">
 
   <form action="/{{locationId}}?_method=PATCH" method="POST">
 
@@ -43,9 +43,11 @@
 
     <button class="button is-link is-info" type="submit">Update</button>
 
+  </form>
+
   <form action="/{{locationId}}?_method=DELETE" method="POST">
     <button class="button is-text" type="submit">Delete</button>
   </form>
-
-  </form>
 </div>
+</div>
+ 
