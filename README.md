@@ -3,7 +3,7 @@
 **Purpose**
 PicSpot was created to provide a rising social media stars with the hottest locations to create content for their media pages. Sometimes it is hard to create consistent content and keep up with a certain theme. This app will make that part easier by having user generated content providing locations that are great for influencer photography. 
 
-**User Stores**
+**User Stories**
 - As a user I would upload my favorite places to take pictures for my social media pages
 
 - As a user I would like to know any tips for utilizing the locations ( i.e. where to park, the best times to go)
