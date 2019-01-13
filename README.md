@@ -20,21 +20,21 @@ PicSpot was created to provide a rising social media stars with the hottest loca
 **Wireframes**
 
 
-[Imgur](https://i.imgur.com/210Y0ju.png)
+![wireframe](wireframes.png)
 
 https://www.figma.com/file/IEXFx7pwgpXEGPAN2C0dJEhK/FeedPix?node-id=0%3A1
 
 **ERD**
 
-[Imgur](https://i.imgur.com/LxQ9sTv.jpg)
+![erd](erd.jpg)
 
 **Final Design**
 
-[Imgur](https://i.imgur.com/dMdGUtV.png)
+![splash page](picspot.png)
 
-[Imgur](https://i.imgur.com/8FhqpHr.png)
+![location feed](home.png)
 
-[Imgur](https://i.imgur.com/TzIEtKp.png)
+![add a spot](addspot.png)
 
 **Links**
 
