@@ -9,8 +9,10 @@ const locationController = {
     },
 
     show: (req, res) => {
-        Locations.find({}).populate('comments').then((allLocations) => { 
-            res.render("index/locations", {allLocations})
+        Locations.find({}).populate('comments').then((allLocations) => {
+            res.render("index/locations", {
+                allLocations
+            })
         })
     },
 
@@ -19,13 +21,13 @@ const locationController = {
     },
 
     create: (req, res) => {
-      
+
         let images = req.files.image;
 
-        images.mv(`public/images/uploads/${req.files.image.name}`, function(err) {
-          if (err)
-            return res.status(500).send(err);
-              });
+        images.mv(`public/images/uploads/${req.files.image.name}`, function (err) {
+            if (err)
+                return res.status(500).send(err);
+        });
 
         const imageUpload = `images/uploads/${req.files.image.name}`
 
@@ -36,21 +38,27 @@ const locationController = {
             address: req.body.address,
             image: imageUpload,
             comments: []
-        }).then((newLocation) => { 
+        }).then((newLocation) => {
             res.redirect('/all-locations')
         })
     },
 
     edit: (req, res) => {
         const locationId = req.params.id
-        Locations.findOne({_id:locationId}).then((populateInfo) => {
-            res.render('locations/edit-location', {populateInfo} )
+        Locations.findOne({
+            _id: locationId
+        }).then((populateInfo) => {
+            res.render('locations/edit-location', {
+                populateInfo
+            })
         })
     },
 
     update: (req, res) => {
         const locationId = req.params.id
-        Locations.findByIdAndUpdate(locationId, req.body, {new: true}).then((location) => {
+        Locations.findByIdAndUpdate(locationId, req.body, {
+            new: true
+        }).then((location) => {
             res.redirect('/all-locations')
         })
     },
@@ -58,7 +66,6 @@ const locationController = {
     delete: (req, res) => {
         const locationId = req.params.id
         Locations.findByIdAndDelete(locationId).then(() => {
-            console.log('deleted')
             res.redirect('/all-locations')
         })
     }

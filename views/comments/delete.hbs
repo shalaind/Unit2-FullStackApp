@@ -1,16 +1,15 @@
 <h1 class="pageHeader">Delete Comment</h1>
 <div class="formContainer">
 
-{{comment.username}}
-{{comment.comment}}
-
+    {{comment.username}}
+    {{comment.comment}}
 
 </div>
 
 <div class="formContainer">
 
-<form action="/comment/{{comment._id}}?_method=DELETE" method="POST">
-    <button class="button is-link is-info" type="submit">Delete</button>
-</form>
+    <form action="/comment/{{comment._id}}?_method=DELETE" method="POST">
+        <button class="button is-link is-info" type="submit">Delete</button>
+    </form>
 
 </div>

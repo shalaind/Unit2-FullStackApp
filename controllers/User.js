@@ -14,7 +14,6 @@ const userController = {
     delete: (req, res) => {
         const userId = req.params.id
         Users.findByIdAndRemove(userId).then(() => {
-            console.log("user deleted")
             res.redirect('/users')
         })
     },
@@ -26,10 +25,10 @@ const userController = {
     create: (req, res) => {
         let images = req.files.image;
 
-        images.mv(`public/images/uploads/${req.files.image.name}`, function(err) {
-          if (err)
-            return res.status(500).send(err);
-              });
+        images.mv(`public/images/uploads/${req.files.image.name}`, function (err) {
+            if (err)
+                return res.status(500).send(err);
+        });
 
         const imageUpload = `images/uploads/${req.files.image.name}`
 
@@ -43,11 +42,13 @@ const userController = {
     },
 
     show: (req, res) => {
-    
+
         const userId = req.params.id
         Users.findById(userId).then((userId) => {
 
-        res.render("users/userProfile", {userId})
+            res.render("users/userProfile", {
+                userId
+            })
         })
     }
 
