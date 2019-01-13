@@ -1,55 +1,59 @@
 <h1 class="pageHeader">Add a Spot</h1>
 
 <div class="formContainer">
-<form action="/create-location" method="POST">
+  <form action="/create-location" method="POST" enctype="multipart/form-data">
 
-<div class="field">
-  <label class="label">Username</label>
-  <div class="control">
-    <input class="inputBox" type="text" name="username"  value="">
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control">
+        <input class="input" type="text" name="username" value="">
+      </div>
     </div>
-</div>
 
-<div class="field">
-  <label class="label">Title</label>
-  <div class="control">
-    <input class="inputBox" type="text" name="title"  value="">
+    <div class="field">
+      <label class="label">Title</label>
+      <div class="control">
+        <input class="input" type="text" name="title" value="">
+      </div>
     </div>
-</div>
 
-<div class="field">
-  <label class="label">Address</label>
-  <div class="control">
-    <input class="inputBox" type="text" name="address"  value="">
+    <div class="field">
+      <label class="label">Address</label>
+      <div class="control">
+        <input class="input" type="text" name="address" value="">
+      </div>
     </div>
-</div>
 
 
-<div class="field">
-  <label class="label">Caption</label>
-  <div class="control">
-    <input class="inputBox" type="text" name="caption"  value="">
+    <div class="field">
+      <label class="label">Caption</label>
+      <div class="control">
+        <textarea class="textarea is-large" name="caption" rows="2" cols="10" wrap="soft"> </textarea>
+
+      </div>
     </div>
-</div>
 
-<div class="field">
-  <label class="label">Image</label>
-  <div class="control">
-    <input class="inputBox" type="text" name="image"  value="">
-    </div>
-</div>
+    <label class="label">Image</label>
+    <div class="file is-info has-name">
 
-
-
+      <label class="file-label">
+        <input id="file" class="file-input" type="file" name="image">
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+          <span class="file-label">
+            Choose a file…
+          </span>
+        </span>
+        <span id="filename" class="file-name">
+          yourfilename.jpg
+        </span>
+      </label>
+    </div><br>
     <button class="button is-link is-info" type="submit">Submit</button>
-</form>
+  </form>
 
 </div>
 
-
-
-
-
-
-
-{{!-- <a href="/create-location">submit</a></li> --}}
+<script src="/imageUpload.js"></script>

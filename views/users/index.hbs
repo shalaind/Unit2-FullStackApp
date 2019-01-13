@@ -1,37 +1,37 @@
 <h1 class="pageHeader">Users</h1>
 
-
-<div class="formContainer">
 {{#each users}}
-        <div class="card">
+<div class="userContainer">
+        <div class="card" style="width: 400px; height: 500px;">
                 <div class="card-image">
                         <figure class="image is-4by3">
-<a href="/user-profile/{{_id}}"> <img src={{image}} alt="" ></a>
-
+                                {{!-- <a href="/user-profile/{{_id}}"> --}}
+                                        <img src=/uploads/{{image}} alt="">
+                                        {{!-- </a> --}}
                         </figure>
                 </div>
                 <div class="card-content">
                         <div class="media">
-                                <div class="media-left">
+                                {{!-- <div class="media-left">
                                         <figure class="image is-48x48">
-                                            <a href="/user-profile/{{_id}}"> <img src={{image}} alt="" ></a>
+                                                <a href="/user-profile/{{_id}}"> <img src={{image}} alt=""></a>
                                         </figure>
-                                </div>
+                                </div> --}}
                                 <div class="media-content">
-                                        <p class="title is-4">@{{username}}</p>
-                                </div>
-                        </div>
-
-                        <div class="content">
-                                {{email}}
-                                <br>
-                                <br>
+                                        <p class="title is-3">@{{username}}</p>
+                                        <p class="title is-5">{{email}}</p>
 
                                 <form action="/user-profile/{{_id}}?_method=DELETE" method="POST">
                                         <button class="button is-link is-info" type="submit">Delete</button>
                                 </form>
+                                </div>
                         </div>
+
+                        <div class="content">
+                              
+                        </div>
+
                 </div>
         </div>
-{{/each}}
 </div>
+{{/each}}

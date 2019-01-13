@@ -1,26 +1,59 @@
-{{#each allLocations}}
+<h1 class="pageHeader">Latest Spots</h1>
 
-<div class= "container">
-<div class="locationHeader">
-<div class="columnLH">
-<h1><strong>{{title}}</strong></h1>
-<h2 class="edit">{{address}}</h2>
+<div class="container">
+    {{#each allLocations}}
+    <div class="parentLocation">
+        <div class="locationHeader">
+            <div class="columnOne">
+                <h1 style="font-size: 1.5rem;"><strong>{{title}}</strong></h1>
+                <h2 class="edit">{{address}}</h2>
+            </div>
+            <div class="columnTwo">
+                <a class="edit" href="/{{_id}}/edit-location">edit</a>
+            </div>
+        </div>
+        <div class="locationImage">
+            <img src={{image}} alt="">
+        </div>
+        <div class="locationCaption" <p><strong>{{username}}</strong> {{caption}}</p>
+        </div>
+        <div class="locationComments">
+            {{#each comments}}
+
+            <article class="media">
+
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>{{username}}</strong> <small>@{{username}}</small> <small>31m</small>
+                            <br>
+                            {{comment}}
+                        </p>
+                    </div>
+                    <nav class="level is-mobile">
+                        <div class="level-left">
+                            <a class="level-item">
+                                <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                            </a>
+                            <a class="level-item">
+                                <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="media-right">
+                    <form action="/comment/{{_id}}?_method=DELETE" method="POST">
+                        <button class="delete" type="submit">Delete</button>
+                    </form>
+                </div>
+            </article> <br> 
+
+            {{/each}}
+
+            <a href="/{{_id}}/add-comment">add comment</a>
+        </div>
+
+    </div>
+    {{/each}}
 
 </div>
-<a class="edit" href="/{{_id}}/edit-location">edit</a>
-</div>
-
-
-<img src={{image}} alt="" >
-<p><strong>{{username}}</strong> {{caption}}</p>
-<div>
-{{#each comments}}
-<p><strong>{{username}}</strong> {{comment}} <a href="/{{_id}}/edit-comment">edit</a></li></p>
-{{/each}}
-
-<a href="/{{_id}}/add-comment">add comment</a>
-</div>
-
-{{/each}}
-</div>
-

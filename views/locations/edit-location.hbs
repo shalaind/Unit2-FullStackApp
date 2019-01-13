@@ -1,53 +1,38 @@
 <h1 class="pageHeader">Edit Spot</h1>
 
 <div class="outsideContainer">
-<div class="updateContainer">
+  <div class="updateContainer">
 
-  <form action="/{{locationId}}?_method=PATCH" method="POST">
+    <form action="/{{populateInfo._id}}?_method=PATCH" method="POST">
 
-    <div class="field">
-      <label class="label">Username</label>
-      <div class="control">
-        <input class="inputBox" type="text" name="username"  value="">
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" name="title" value="{{populateInfo.title}}">
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label class="label">Title</label>
-      <div class="control">
-        <input class="inputBox" type="text" name="title"  value="">
+      <div class="field">
+        <label class="label">Address</label>
+        <div class="control">
+          <input class="input" type="text" name="address" value="{{populateInfo.address}}">
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label class="label">Address</label>
-      <div class="control">
-        <input class="inputBox" type="text" name="address"  value="">
+
+      <div class="field">
+        <label class="label">Caption</label>
+        <div class="control">
+          <input class="input" type="text" name="caption" value="{{populateInfo.caption}}">
+        </div>
       </div>
-    </div>
 
+      <button class="button is-link is-info" type="submit">Update</button>
 
-    <div class="field">
-      <label class="label">Caption</label>
-      <div class="control">
-        <input class="inputBox" type="text" name="caption"  value="">
-      </div>
-    </div>
+    </form>
 
-    <div class="field">
-      <label class="label">Image</label>
-      <div class="control">
-        <input class="inputBox" type="text" name="image"  value="">
-      </div>
-    </div>
-
-    <button class="button is-link is-info" type="submit">Update</button>
-
-  </form>
-
-  <form action="/{{locationId}}?_method=DELETE" method="POST">
-    <button class="button is-text" type="submit">Delete</button>
-  </form>
+    <form action="/{{populateInfo._id}}?_method=DELETE" method="POST">
+      <button class="button is-text" type="submit">Delete</button>
+    </form>
+  </div>
 </div>
-</div>
- 

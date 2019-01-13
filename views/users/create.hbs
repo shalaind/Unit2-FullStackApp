@@ -3,32 +3,51 @@
 
 <div class="formContainer">
 
-<form action="/create-user" method="POST">
+  <form action="/create-user" method="POST">
 
-<div class="field">
-  <label class="label">Username</label>
-  <div class="control">
-    <input class="inputBox" type="text" name="username"  value="">
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control">
+        <input class="input" type="text" name="username" value="">
+      </div>
     </div>
-</div>
 
-<div class="field">
-  <label class="label">Email</label>
-  <div class="control">
-    <input class="inputBox" type="text" name="email"  value="">
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input class="input" type="text" name="email" value="">
+      </div>
     </div>
-</div>
 
-<div class="field">
-  <label class="label">Image</label>
-  <div class="control">
-    <input class="inputBox" type="text" name="image"  value="">
+    <div class="field">
+      <label class="label">Image</label>
+      <div class="control">
+        <input class="input" type="text" name="image" value="">
+      </div>
     </div>
-</div>
+
+
+    <label class="label">Image</label>
+    <div class="file is-info has-name">
+
+      <label class="file-label">
+        <input id="file" class="file-input" type="file" name="image">
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+          <span class="file-label">
+            Choose a file…
+          </span>
+        </span>
+        <span id="filename" class="file-name">
+          yourfilename.jpg
+        </span>
+
+      </label>
+    </div>
+    <br>
+
     <button class="button is-link is-info" type="submit">Submit</button>
-
-
-
-</div>
-
-</form>
+  </form>
+  <script src="/imageUpload.js"></script>

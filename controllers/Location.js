@@ -1,6 +1,6 @@
 Locations = require("../models/Location")
 Comments = require("../models/Comment")
-
+ExpressUpload = require('express-fileupload')
 
 const locationController = {
 
@@ -19,21 +19,33 @@ const locationController = {
     },
 
     create: (req, res) => {
+      
+        let images = req.files.image;
+
+        images.mv(`public/images/uploads/${req.files.image.name}`, function(err) {
+          if (err)
+            return res.status(500).send(err);
+              });
+
+        const imageUpload = `images/uploads/${req.files.image.name}`
+
         Locations.create({
             username: req.body.username,
             title: req.body.title,
             caption: req.body.caption,
             address: req.body.address,
-            image: req.body.image,
+            image: imageUpload,
             comments: []
-        }).then(newLocation => {
+        }).then((newLocation) => { 
             res.redirect('/all-locations')
         })
     },
 
     edit: (req, res) => {
         const locationId = req.params.id
-        res.render('locations/edit-location', {locationId})
+        Locations.findOne({_id:locationId}).then((populateInfo) => {
+            res.render('locations/edit-location', {populateInfo} )
+        })
     },
 
     update: (req, res) => {

@@ -1,16 +1,49 @@
 
-.locationHeader {
+.parentLocation {
     display: flex;
     margin-top: 5%;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.locationHeader {
+    width: 700px;
+    display: flex;
     justify-content: space-between;
-    font-size: 2rem; 
+
+}
+
+.locationImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 700px;
+}
+
+.locationImage img{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.locationComments {
+    width: 650px;
+}
+
+.locationCaption {
+    width: 700px;
+    font-size: 14pt;
+    padding: 5pt;
+
 }
 
 .edit {
     font-size: 1rem; 
     margin-top: 2%;
     margin-bottom: 5%; 
-
+    color: black;
 }
 
 .userImage {
@@ -25,9 +58,9 @@
 
 .userContainer {
     display: flex;
-    justify-content: space-around;
     margin-top: 2%;
-    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
 }
 
 .formContainer {
@@ -37,8 +70,9 @@
     justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
-
 }
+
+
 
 .updateContainer {
     display: flex;
@@ -48,7 +82,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: column;
-
 }
 
 .outsideContainer {
@@ -63,18 +96,9 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    /* align-content: center; */
     flex-direction: column;
     max-width: 40%;
-    /* flex-wrap: wrap; */
     justify-content: space-around;
-}
-
-
-.inputBox {
-    width: 300px;
-    height: 50px;
-    border: solid gray 1px;
 }
 
 .pageHeader {
