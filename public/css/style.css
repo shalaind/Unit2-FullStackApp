@@ -73,7 +73,6 @@
 }
 
 
-
 .updateContainer {
     display: flex;
     margin-top: 2%;
@@ -88,17 +87,18 @@
     display: flex; 
     justify-content: center;
     align-items: center;
+    margin-top: -50px;
 }
 
 .splashContainer {
     display: flex;
-    margin-top: 6%;
     text-align: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     max-width: 40%;
     justify-content: space-around;
+
 }
 
 .pageHeader {

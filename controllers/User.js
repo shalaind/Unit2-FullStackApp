@@ -1,4 +1,6 @@
 Users = require("../models/User")
+ExpressUpload = require('express-fileupload')
+
 
 
 const userController = {
@@ -22,10 +24,19 @@ const userController = {
     },
 
     create: (req, res) => {
+        let images = req.files.image;
+
+        images.mv(`public/images/uploads/${req.files.image.name}`, function(err) {
+          if (err)
+            return res.status(500).send(err);
+              });
+
+        const imageUpload = `images/uploads/${req.files.image.name}`
+
         Users.create({
             username: req.body.username,
             email: req.body.email,
-            image: req.body.image
+            image: imageUpload
         }).then(newUser => {
             res.redirect('/users')
         })
@@ -43,9 +54,3 @@ const userController = {
 }
 
 module.exports = userController
-
-// delete: (req, res) => {
-//     const locationId = req.params.id
-//     Locations.findByIdAndRemove(locationId).then(() => {
-//         res.redirect('/all-locations')
-//     })

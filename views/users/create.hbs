@@ -3,7 +3,9 @@
 
 <div class="formContainer">
 
-  <form action="/create-user" method="POST">
+  <form action="/create-user" method="POST" enctype="multipart/form-data">
+        <p class="help is-danger" style="text-align:right;">* Is required</p><br>
+
 
     <div class="field">
       <label class="label">Username</label>
@@ -19,15 +21,7 @@
       </div>
     </div>
 
-    <div class="field">
-      <label class="label">Image</label>
-      <div class="control">
-        <input class="input" type="text" name="image" value="">
-      </div>
-    </div>
-
-
-    <label class="label">Image</label>
+    <label class="label">Image <span style="color:red;">*</span></label>
     <div class="file is-info has-name">
 
       <label class="file-label">

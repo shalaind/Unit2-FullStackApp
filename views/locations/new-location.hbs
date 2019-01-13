@@ -1,7 +1,9 @@
 <h1 class="pageHeader">Add a Spot</h1>
 
+
 <div class="formContainer">
   <form action="/create-location" method="POST" enctype="multipart/form-data">
+      <p class="help is-danger" style="text-align:right;">* Is required</p><br>
 
     <div class="field">
       <label class="label">Username</label>
@@ -33,11 +35,14 @@
       </div>
     </div>
 
-    <label class="label">Image</label>
+    <label class="label">Image <span style="color:red;">*</span></label>
+      {{!-- <p class="help is-danger">
+        This field is required
+      </p> --}}
     <div class="file is-info has-name">
 
       <label class="file-label">
-        <input id="file" class="file-input" type="file" name="image">
+        <input id="file" class="file-input is-danger" type="file" name="image">
         <span class="file-cta">
           <span class="file-icon">
             <i class="fas fa-upload"></i>

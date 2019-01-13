@@ -1,6 +1,6 @@
 <h1 class="pageHeader">Edit Spot</h1>
 
-<div class="outsideContainer">
+<div class="outsideContainer" style="margin-top: 1%;">
   <div class="updateContainer">
 
     <form action="/{{populateInfo._id}}?_method=PATCH" method="POST">
@@ -23,7 +23,8 @@
       <div class="field">
         <label class="label">Caption</label>
         <div class="control">
-          <input class="input" type="text" name="caption" value="{{populateInfo.caption}}">
+
+          <input style="width: 300px;" class="input" type="text" name="caption" value="{{populateInfo.caption}}">
         </div>
       </div>
 
